@@ -4,8 +4,8 @@
 	font-family: 'Poppins', sans-serif;
 }
 body,html{
-	height: 130%;
- 
+	height: 100%;
+    width: 100%;
 	margin: 0;
 	padding: 0;
 	color: #fff;
@@ -16,13 +16,11 @@ body,html{
 }
 .background
 {
-    background-image: url(img/bg.jpg);
-    filter: blur(8px);
-    -webkit-filter: blur(2px);
-    width: 99vw;
+    background-image: url(img/wallpaper3.jpg);
+    width: 100vw;
     height: 100vh;
     opacity: 0.9;
-      background-size: cover;
+    background-size: cover;
 
     background-attachment: fixed;
     background-position: center; 
@@ -34,69 +32,77 @@ body,html{
 .infoBox
 {
     border-radius: 5%;
-    background-color: #f2e9d8;
-    color: #505253;
+    background-color: rgba(30, 33, 34, 0.65);
+    color: #a89595;
     padding: 20px;
     position: absolute;
     margin: auto;
-    left: 75%;
+    left: 50%;
     top: 50%;
+    height: 400px;
+    width: 400px;
     transform: translate(-50%, -50%);
     text-align: center;
+    justify-content: center;
 }
 
 .infoBox__name
 {
-    font-size: 200%;
+    font-size: 150%;
 
     margin: 5px;
 
 }
-.infoBox__img
-{
-    border-radius: 10%;
-    
-    height: 150px;
-    width: 150px;
- display: absolute;
- justify-content: center;
- align-items: center;
-}
+
 .infoBox__msg
 {
+    display: inline-block;
     text-align: center;
     justify-content: center;
     font-weight: 700;
-    max-width: 200px;
+    max-width: 400px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.infoBox__img
+{
+    border-radius: 10%;
+    width: 150px;
+    height: 150px;
     margin: 10px;
 }
 
-.infoBox__btn 
+
+/*.btn__aboutme*/
+/*{*/
+/*    display: inline-flex;*/
+/*    position: relative;*/
+/*    text-decoration: none;*/
+/*    background-color: #5f6367;*/
+/*    border: none;*/
+/*    color:#43271d;*/
+/*    font-weight: 100;*/
+/*    padding: 12px 12px;*/
+/*    margin: 10px;*/
+/*    border-radius: 50px;*/
+/*    outline: none;*/
+/*    cursor: pointer;*/
+/*    align-content: center;*/
+/*    transition: opacity 0.5s ease;*/
+/*    */
+
+
+/*}*/
+.infoBox__MusicPlay
 {
-    padding-top: 10px;
-    align-items: center;
-    display: absolute;
     justify-content: center;
+
 }
-.btn__aboutme
+.infoBox__MusicPlay__img
 {
-    display: inline-flex;
-    position: relative;
-    text-decoration: none;
-    background-color: #d5bb96;
-    border: none;
-    color:#43271d;
-    font-weight: 100;
-    padding: 12px 12px;
-    margin: 10px;
-    border-radius: 50px;
-    outline: none;
-    cursor: pointer;
-    align-content: center;
-    transition: opacity 0.5s ease;
-    
-
-
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
 }
 
 .btn__aboutme:hover
