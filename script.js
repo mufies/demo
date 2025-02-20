@@ -1,5 +1,5 @@
-document.getElementById('scrollToAboutMe').addEventListener('click', function () {
-    const aboutMeBox = document.getElementById('aboutMeSection');
-    aboutMeBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-  
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.querySelector('.infoBox').style.opacity = '1';
+    }, 500); // Delay of 2 seconds
+});

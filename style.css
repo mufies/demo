@@ -16,12 +16,11 @@ body,html{
 }
 .background
 {
-    background-image: url(img/wallpaper3.jpg);
+    background-image: url(img/blackwallpaper.jpg);
     width: 100vw;
     height: 100vh;
     opacity: 0.9;
     background-size: cover;
-
     background-attachment: fixed;
     background-position: center; 
     background-repeat: no-repeat;
@@ -29,8 +28,9 @@ body,html{
 
 }
 
-.infoBox
-{
+.infoBox {
+    opacity: 0; /* Hide the infoBox initially */
+    transition: opacity 2s ease; /* Add transition for opacity */
     border-radius: 5%;
     background-color: rgba(30, 33, 34, 0.65);
     color: #a89595;
@@ -39,11 +39,13 @@ body,html{
     margin: auto;
     left: 50%;
     top: 50%;
-    height: 400px;
+    height: 350px;
     width: 400px;
     transform: translate(-50%, -50%);
     text-align: center;
     justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .infoBox__name
@@ -53,6 +55,7 @@ body,html{
     margin: 5px;
 
 }
+
 
 .infoBox__msg
 {
@@ -67,8 +70,8 @@ body,html{
 .infoBox__img
 {
     border-radius: 10%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
 }
 
@@ -118,7 +121,7 @@ body,html{
 {
     border-radius: 5%;
     background-color: #f2e9d8;
-    
+
     color: #505253;
     padding: 20px;
     position: absolute;
@@ -136,7 +139,7 @@ body,html{
 {
     border-radius: 5%;
     background-color: #f2e9d8;
-    
+
     color: #505253;
     padding: 20px;
     position: absolute;
@@ -154,17 +157,26 @@ body,html{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 15px;
    
    }
 .socialLinkBox__icon
 {
     height: 40px;
     width: 40px;
-    font-size: 30px;
-    
+    font-size: 25px;
+    gap: 2px;
     color: #d5bb96;
     transition: opacity 0.5s ease;
 }
 .socialLinkBox__icon:hover{
     opacity: 0.7;
+}
+
+.discordInfo__btn-img
+{
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
 }
