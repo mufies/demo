@@ -16,11 +16,7 @@
     <div class="terminal-container">
         <!-- Terminal Header -->
         <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn close"></span>
-                <span class="btn minimize"></span>
-                <span class="btn maximize"></span>
-            </div>
+            <!-- Buttons Removed for Arch Linux Style -->
             <div class="terminal-title">mufies@portfolio:~</div>
         </div>
 
@@ -28,136 +24,13 @@
         <div class="terminal-body">
             <div class="terminal-content" id="terminal-content">
 
-                <!-- Command Lines -->
-                <div class="command-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">cat
-                        about.txt</span>
-                </div>
-                <div class="output">
-                    <div class="profile-section">
-                        <img src="img/haha.jpg" alt="Anime Profile" class="anime-profile">
-                        <div class="profile-info">
-                            <p><span class="label">Name:</span> Tri Mai - チマイ</p>
-                            <p><span class="label">Role:</span> Full-Stack Developer</p>
-                            <p><span class="label">Location:</span> Vietnam 🇻🇳</p>
-                            <p><span class="label">Status:</span> <span class="status-online">● Online</span> - Ready to
-                                code!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="command-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">ls
-                        skills/</span>
-                </div>
-                <div class="output skills-grid">
-                    <div class="skill-item">
-                        <i class="fa-brands fa-java"></i>
-                        <span>Java</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-solid fa-code"></i>
-                        <span>.NET</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-brands fa-angular"></i>
-                        <span>Angular</span>
-                    </div>
-
-                    <div class="skill-item">
-                        <i class="fa-brands fa-react"></i>
-                        <span>React</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-brands fa-js"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-brands fa-git-alt"></i>
-                        <span>Git</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-brands fa-docker"></i>
-                        <span>Docker</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fa-solid fa-database"></i>
-                        <span>SQL</span>
-                    </div>
-
-                </div>
-
-                <div class="command-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">cat
-                        projects.md</span>
-                </div>
-                <div class="output">
-                    <div class="project-item">
-                        <p class="project-title">Ride-Hailing Application</p>
-                        <p class="project-desc">╰─➤ Full-stack ride-hailing app with real-time GPS tracking, WebSocket
-                            communication, and map integration using Angular & Spring Boot</p>
-                        <p class="project-tech"> Technologies: Angular 18+, Java, Spring Boot, WebSocket, TrackAsia Maps
-                        </p>
-                    </div>
-                    <div class="project-item">
-                        <p class="project-title">Kita - Social Music Platform</p>
-                        <p class="project-desc">╰─➤ Music streaming web with chatroom and voice channels for listening
-                            music together. Features playlist management, Spotify/YouTube import, and real-time
-                            collaboration
-                        </p>
-                        <p class="project-tech">Technologies: ASP.NET Core 8, React 19.2, PostgreSQL, SignalR,
-                            TypeScript</p>
-                    </div>
-                </div>
-
-                <div class="command-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
-                        class="command">./connect-social.sh</span>
-                </div>
-                <div class="output">
-                    <p class="success">✓ Establishing connections...</p>
-                    <div class="social-links">
-                        <a href="https://github.com/mufies" target="_blank" class="social-link">
-                            <i class="fa-brands fa-github"></i>
-                            <span>github.com/mufies</span>
-                        </a>
-                        <a href="https://www.facebook.com/100090675770318" target="_blank" class="social-link">
-                            <i class="fa-brands fa-facebook"></i>
-                            <span>facebook.com/mufies</span>
-                        </a>
-                        <a href="https://www.instagram.com/trimai._05/" target="_blank" class="social-link">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>instagram.com/trimai._05</span>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCiNPiHEm3Jawy6EPqiEd1CA" target="_blank"
-                            class="social-link">
-                            <i class="fa-brands fa-youtube"></i>
-                            <span>youtube.com/@tmai14</span>
-                        </a>
-                        <a href="https://open.spotify.com/playlist/7wI4VOj7EimKePpDlvzams?si=4a6b3b8f271b4c1f"
-                            target="_blank" class="social-link">
-                            <i class="fa-brands fa-spotify"></i>
-                            <span>spotify - My Playlist</span>
-                        </a>
-                        <a href="https://steamcommunity.com/id/flucc/" target="_blank" class="social-link">
-                            <i class="fa-brands fa-steam"></i>
-                            <span>steam/flucc</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="command-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
-                        class="command">fortune</span>
-                </div>
-                <div class="output">
-                    <p class="quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
-                </div>
+                <!-- Initial Welcome Message (Optional) or just empty -->
+                <div class="output" id="welcome-msg"></div>
 
                 <!-- Input Line with Cursor -->
                 <div class="command-line input-line">
-                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
-                        class="cursor">█</span>
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$
+                    <input type="text" id="cmd-input" class="cmd-input" autocomplete="off" spellcheck="false" autofocus>
                 </div>
             </div>
         </div>
