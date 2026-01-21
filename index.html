@@ -1,69 +1,169 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Tri Mai</title>
-        <link rel="shortcut icon" href="img/y.png"/>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
-    </head>
-    <body>
-        <div class="background"></div>
-        <div class="infoBox">
-            <img src="img/haha.jpg" class="infoBox__img">
-            <h2 class="infoBox__name">Tri Mai - チマイ</h2>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mufies@portfolio:~$</title>
+    <link rel="shortcut icon" href="img/y.png" />
+    <link rel="stylesheet" href="terminal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
+<body>
+    <div class="terminal-container">
+        <!-- Terminal Header -->
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
+            </div>
+            <div class="terminal-title">mufies@portfolio:~</div>
+        </div>
 
+        <!-- Terminal Body -->
+        <div class="terminal-body">
+            <div class="terminal-content" id="terminal-content">
 
-            <div class="icon">
-                                <a class="socialLinkBox__icon" href="https://www.facebook.com/100090675770318" target="_blank">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                                <a class="socialLinkBox__icon" href="https://github.com/mufies" target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
+                <!-- Command Lines -->
+                <div class="command-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">cat
+                        about.txt</span>
+                </div>
+                <div class="output">
+                    <div class="profile-section">
+                        <img src="img/haha.jpg" alt="Anime Profile" class="anime-profile">
+                        <div class="profile-info">
+                            <p><span class="label">Name:</span> Tri Mai - チマイ</p>
+                            <p><span class="label">Role:</span> Full-Stack Developer</p>
+                            <p><span class="label">Location:</span> Vietnam 🇻🇳</p>
+                            <p><span class="label">Status:</span> <span class="status-online">● Online</span> - Ready to
+                                code!</p>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="infoBox__MusicPlay">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4nSV8NdhnBWLuz2G7X51WH?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div class="command-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">ls
+                        skills/</span>
+                </div>
+                <div class="output skills-grid">
+                    <div class="skill-item">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-code"></i>
+                        <span>.NET</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-angular"></i>
+                        <span>Angular</span>
+                    </div>
+
+                    <div class="skill-item">
+                        <i class="fa-brands fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+
+                <div class="command-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">cat
+                        projects.md</span>
+                </div>
+                <div class="output">
+                    <div class="project-item">
+                        <p class="project-title">Ride-Hailing Application</p>
+                        <p class="project-desc">╰─➤ Full-stack ride-hailing app with real-time GPS tracking, WebSocket
+                            communication, and map integration using Angular & Spring Boot</p>
+                        <p class="project-tech"> Technologies: Angular 18+, Java, Spring Boot, WebSocket, TrackAsia Maps
+                        </p>
+                    </div>
+                    <div class="project-item">
+                        <p class="project-title">Kita - Social Music Platform</p>
+                        <p class="project-desc">╰─➤ Music streaming web with chatroom and voice channels for listening
+                            music together. Features playlist management, Spotify/YouTube import, and real-time
+                            collaboration
+                        </p>
+                        <p class="project-tech">Technologies: ASP.NET Core 8, React 19.2, PostgreSQL, SignalR,
+                            TypeScript</p>
+                    </div>
+                </div>
+
+                <div class="command-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
+                        class="command">./connect-social.sh</span>
+                </div>
+                <div class="output">
+                    <p class="success">✓ Establishing connections...</p>
+                    <div class="social-links">
+                        <a href="https://github.com/mufies" target="_blank" class="social-link">
+                            <i class="fa-brands fa-github"></i>
+                            <span>github.com/mufies</span>
+                        </a>
+                        <a href="https://www.facebook.com/100090675770318" target="_blank" class="social-link">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>facebook.com/mufies</span>
+                        </a>
+                        <a href="https://www.instagram.com/trimai._05/" target="_blank" class="social-link">
+                            <i class="fa-brands fa-instagram"></i>
+                            <span>instagram.com/trimai._05</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCiNPiHEm3Jawy6EPqiEd1CA" target="_blank"
+                            class="social-link">
+                            <i class="fa-brands fa-youtube"></i>
+                            <span>youtube.com/@tmai14</span>
+                        </a>
+                        <a href="https://open.spotify.com/playlist/7wI4VOj7EimKePpDlvzams?si=4a6b3b8f271b4c1f"
+                            target="_blank" class="social-link">
+                            <i class="fa-brands fa-spotify"></i>
+                            <span>spotify - My Playlist</span>
+                        </a>
+                        <a href="https://steamcommunity.com/id/flucc/" target="_blank" class="social-link">
+                            <i class="fa-brands fa-steam"></i>
+                            <span>steam/flucc</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="command-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
+                        class="command">fortune</span>
+                </div>
+                <div class="output">
+                    <p class="quote">"The only way to do great work is to love what you do." - Steve Jobs</p>
+                </div>
+
+                <!-- Input Line with Cursor -->
+                <div class="command-line input-line">
+                    <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span
+                        class="cursor">█</span>
+                </div>
             </div>
         </div>
-<!--        <div class="aboutmeBox" id="aboutMeSection">-->
-<!--            <img src="img/image.png" class="infoBox__img"> -->
-<!--            <h2 class="aboutmeBox__Begin">About me</h2>           -->
-<!--            <a class="infoBox__msg">-->
-<!--                <br>Lazyaf weeb ig?</br>-->
-<!--            </a>-->
-<!--        </div>-->
-<!--        <div class="socialLinkBox">-->
-<!--            <img src="img/avt1.jpg" class="infoBox__img"> -->
-<!--            <h2 class="aboutmeBox__Begin">Social media link</h2>-->
-<!--            <p>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</p>-->
-<!--            <div class="icon">-->
-<!--                <a class="socialLinkBox__icon" href="https://www.facebook.com/100090675770318" target="_blank">-->
-<!--                    <i class="fa-brands fa-facebook"></i>   -->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://github.com/mufies" target="_blank">-->
-<!--                    <i class="fa-brands fa-github"></i>-->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://www.instagram.com/muf1es_/" target="_blank">-->
-<!--                    <i class="fa-brands fa-instagram"></i>-->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://www.youtube.com/channel/UCiNPiHEm3Jawy6EPqiEd1CA" target="_blank">-->
-<!--                    <i class="fa-brands fa-youtube"></i>-->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://locket.camera/links/tyBfSa8Z4SJ3uBZj9" target="_blank">-->
-<!--                    <i class="fa fa-solid fa-heart" aria-hidden="true"></i>-->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://open.spotify.com/playlist/7wI4VOj7EimKePpDlvzams?si=4a6b3b8f271b4c1f" target="_blank">-->
-<!--                    <i class="fa-brands fa-spotify"></i>-->
-<!--                </a>-->
-<!--                <a class="socialLinkBox__icon" href="https://steamcommunity.com/id/flucc/" target="_blank">-->
-<!--                    <i class="fa-brands fa-steam"></i>-->
-<!--                </a>-->
-<!--            </div>           -->
-<!--        </div>-->
-        <script src="script.js"></script>
-    </body>
+    </div>
+
+    <script src="terminal.js"></script>
+</body>
+
 </html>
