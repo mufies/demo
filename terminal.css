@@ -55,6 +55,9 @@ body {
     text-transform: uppercase;
 }
 
+/* Header Icon */
+/* Removed */
+
 /* Terminal Body */
 .terminal-body {
     background: transparent;
@@ -92,34 +95,66 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Interactive Elements */
-.prompt {
-    color: #1793D1;
-    /* Arch Blue - High visibility */
+/* Kali Linux Style Interactive Elements */
+.command-line {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.prompt-line-1,
+.prompt-line-2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.prompt-line-1 {
+    margin-bottom: 2px;
+}
+
+.kali-symbol {
+    color: #ff5f56;
+    /* Red */
     font-weight: bold;
-    text-shadow: 0 0 10px rgba(23, 147, 209, 0.3);
+    margin-right: 0;
+}
+
+.kali-user {
+    color: #ff5f56;
+    font-weight: bold;
+}
+
+.kali-host {
+    color: #ff5f56;
+    font-weight: bold;
 }
 
 .path {
-    color: #26C6DA;
-    /* Cyan/Teal */
-}
-
-.command {
     color: #ffffff;
     font-weight: bold;
 }
 
+.prompt-icon-inline {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
 .output {
-    color: #d0d0d0;
-    margin-bottom: 24px;
+    color: #e0e0e0;
+    margin-bottom: 16px;
+    padding-left: 2px;
 }
 
 /* Input Area */
 .input-line {
     margin-top: 16px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* Two lines for input */
 }
 
 .cmd-input {
@@ -131,15 +166,21 @@ body {
     flex: 1;
     margin-left: 8px;
     outline: none;
-    caret-color: #1793D1;
-    /* Arch Blue cursor */
+    caret-color: #ff5f56;
+    /* Red cursor */
+}
+
+.command {
+    color: #ffffff;
+    font-weight: bold;
 }
 
 /* FastFetch & ASCII */
 .ascii-logo pre {
-    color: #1793D1;
+    color: #ff5f56;
+    /* Red */
     font-weight: bold;
-    text-shadow: 0 0 15px rgba(23, 147, 209, 0.4);
+    text-shadow: 0 0 15px rgba(255, 95, 86, 0.4);
 }
 
 .fastfetch-container {
@@ -155,7 +196,7 @@ body {
 }
 
 .key {
-    color: #1793D1;
+    color: #ff5f56;
     min-width: 100px;
     font-weight: bold;
 }
@@ -195,7 +236,7 @@ body {
 }
 
 .c5 {
-    background: #1793D1;
+    background: #ff5f56;
 }
 
 /* Profile Section */
@@ -214,13 +255,13 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid rgba(23, 147, 209, 0.5);
+    border: 2px solid rgba(255, 95, 86, 0.5);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     object-fit: cover;
 }
 
 .label {
-    color: #1793D1;
+    color: #ff5f56;
     font-weight: 600;
 }
 
@@ -251,8 +292,8 @@ body {
 }
 
 .skill-item:hover {
-    background: rgba(23, 147, 209, 0.15);
-    border-color: rgba(23, 147, 209, 0.4);
+    background: rgba(255, 95, 86, 0.15);
+    border-color: rgba(255, 95, 86, 0.4);
     transform: translateY(-2px);
 }
 
@@ -264,7 +305,7 @@ body {
 /* Projects */
 .project-item {
     background: rgba(0, 0, 0, 0.3);
-    border-left: 2px solid #1793D1;
+    border-left: 2px solid #ff5f56;
     padding: 16px;
     margin-bottom: 16px;
     border-radius: 0 4px 4px 0;
@@ -273,11 +314,11 @@ body {
 
 .project-item:hover {
     transform: translateX(4px);
-    background: rgba(23, 147, 209, 0.05);
+    background: rgba(255, 95, 86, 0.05);
 }
 
 .project-title {
-    color: #1793D1;
+    color: #ff5f56;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 8px;
@@ -310,9 +351,9 @@ body {
 }
 
 .social-link:hover {
-    background: rgba(23, 147, 209, 0.1);
-    border-color: rgba(23, 147, 209, 0.3);
-    box-shadow: 0 0 15px rgba(23, 147, 209, 0.1);
+    background: rgba(255, 95, 86, 0.1);
+    border-color: rgba(255, 95, 86, 0.3);
+    box-shadow: 0 0 15px rgba(255, 95, 86, 0.1);
 }
 
 /* Responsive */
@@ -338,5 +379,36 @@ body {
 
     .ascii-logo {
         font-size: 8px;
+    }
+}
+
+/* Animations */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.terminal-container {
+    animation: zoomIn 0.5s ease-out forwards;
+}
+
+/* CRT Glow Effect for Input */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

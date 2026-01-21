@@ -13,15 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial focus
     cmdInput.focus();
 
-    // Show initial welcome message
+    // Show initial welcome message with typewriter effect
     const welcomeMsg = document.getElementById('welcome-msg');
-    welcomeMsg.innerHTML = `
+    const welcomeHTML = `
         <div style="margin-bottom: 20px;">
             <p>Welcome to Mufies Terminal Portfolio!</p>
             <p>Type <span class="cmd">help</span> to see available commands.</p>
             <p>Type <span class="cmd">fastfetch</span> for system info.</p>
         </div>
     `;
+    typeWriter(welcomeMsg, welcomeHTML, 0);
+
+    function typeWriter(element, html, index) {
+        // Simple approach: process HTML tags instantly, type text char by char
+        // But for rich HTML, it's easier to just fade in lines or use a simpler text approach.
+        // Given the requirement "animation... when user join", a line-by-line reveal is safer for HTML.
+
+        element.style.opacity = '0';
+        element.innerHTML = html;
+
+        // CSS Animation for fade-in effect on content
+        element.style.animation = 'fadeIn 1s forwards';
+    }
 
     // Command History
     let commandHistory = [];
@@ -56,6 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.value = '';
             }
         }
+    });
+
+    // Typing Animation Effect
+    let typingTimer;
+    cmdInput.addEventListener('input', () => {
+        cmdInput.classList.add('typing-pulse');
+        clearTimeout(typingTimer);
+        typingTimer = setTimeout(() => {
+            cmdInput.classList.remove('typing-pulse');
+        }, 100);
     });
 
     function executeCommand(cmd) {
@@ -140,6 +163,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const inputParent = cmdInput.closest('.input-line');
                 terminalContent.innerHTML = '';
                 terminalContent.appendChild(inputParent);
+                // Re-focus after clear
+                cmdInput.focus();
                 return;
             case 'whoami':
                 output = 'mufies';
@@ -159,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (output) {
             const outputDiv = document.createElement('div');
-            outputDiv.className = 'output';
+            outputDiv.className = 'output output-animated'; // Add animation class
             outputDiv.innerHTML = output;
             terminalContent.insertBefore(outputDiv, cmdInput.closest('.input-line'));
         }
@@ -169,7 +194,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const cmdLine = document.createElement('div');
         cmdLine.className = 'command-line';
         cmdLine.innerHTML = `
-            <span class="prompt">mufies@portfolio</span>:<span class="path">~</span>$ <span class="command">${escapeHtml(cmd)}</span>
+            <div class="prompt-line-1">
+                <span class="kali-symbol">┌──(</span>
+                <img src="img/terminal_line_icon.png" class="prompt-icon-inline">
+                <span class="kali-user">mufies</span>
+                <span class="kali-symbol">㉿</span>
+                <span class="kali-host">portfolio</span>
+                <span class="kali-symbol">)-[</span>
+                <span class="path">~</span>
+                <span class="kali-symbol">]</span>
+            </div>
+            <div class="prompt-line-2">
+                <span class="kali-symbol">└─$</span>
+                <span class="command" style="margin-left: 8px;">${escapeHtml(cmd)}</span>
+            </div>
         `;
         terminalContent.insertBefore(cmdLine, cmdInput.closest('.input-line'));
     }
